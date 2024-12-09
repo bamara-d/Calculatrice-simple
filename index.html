@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculatrice Simple</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculatrice Simple</h1>
+
+      <input
+        type="number"
+        id="nombre1"
+        placeholder="Entrez le premier nombre"
+      />
+      <br />
+      <input
+        type="number"
+        id="nombre2"
+        placeholder="Entrez le deuxième nombre"
+      />
+      <br />
+      <button onclick="calculer()">Calculer</button>
+      <br />
+      <input type="text" id="resultat" readonly />
+    </div>
+
+    <script>
+      function calculer() {
+        // Récupérer les valeurs des deux inputs
+        let nombre1 = parseFloat(document.getElementById('nombre1').value);
+        let nombre2 = parseFloat(document.getElementById('nombre2').value);
+        console.log(typeof nombre1);
+        // Choisir l'opérateur ici (vous pouvez le remplacer par n'importe quel autre)
+        let resultat = nombre1 + nombre2; // Ici, on effectue une addition
+
+        // Afficher le résultat dans le troisième input
+        document.getElementById('resultat').value = resultat;
+      }
+    </script>
+  </body>
+</html>
